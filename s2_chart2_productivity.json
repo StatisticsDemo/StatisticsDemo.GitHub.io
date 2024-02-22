@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": {
+      "text":"UK Productivity",
+      "subtitle": ["Variation Within and Across Years", "Source: Unknown (provisionally)"]
+    },
+  
+    "width": 600,
+    "height": 400,
+  
+    "data": {"url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_example_data/uk_productivity.csv"},
+  
+    "mark": {
+      "type": "trail",
+      "color": "darkslategrey"},
+  
+    "encoding": {
+      "x": {"field": "year", "type": "temporal"},
+      "y": {"field": "value", "type": "quantitative"}
+    }
+  }

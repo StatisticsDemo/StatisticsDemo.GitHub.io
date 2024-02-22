@@ -37,11 +37,11 @@
 <!-- The body tag contains the elements that visitors to our page will see. -->
     <h1 style="margin-bottom: 0px;"> <!-- we can also style elements directly in the HTML by setting the style= atrribute of a tag. -->
         <!-- This is a header, it is the largest text on the page -->
-        An Example Portfolio
+        Miloz' Example Portfolio
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Your Name | <a href="https://www.linkedin.com/in/finnmcevoy/">LinkedIn</a> | <a
+        Miloz Davios | <a href="https://www.linkedin.com/in/finnmcevoy/">LinkedIn</a> | <a
             href="https://www.github.com/FM-ds">GitHub</a>
     </p>
     <h3>
@@ -62,13 +62,23 @@
 
     <section>
         <div class="chart-description"> <!-- we are grouping the title and description together so we can style them together -->
-            <h2>Section 2: Another Chart</h2>
+            <h2>Section 2: Productivity</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                This is a created chart chart detailing productivity variation in the UK within each year over time.
+            </p>
+        </div>
+        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
+    <section>
+        <div class="chart-description"> <!-- we are grouping the title and description together so we can style them together -->
+            <h2>Section 3: Another Chart</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 This is a more advanced chart. We'll cover charts like this in more detail later today. Don't worry if you don't understand it yet.
                 Feel free to replace both charts with your own examples.
             </p>
         </div>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
     <!-- Do you want to add more sections? -->
@@ -82,10 +92,12 @@
         // This is a comment in JavaScript - it's a different language to HTML and CSS
 
         var figure_1_spec = "s2_chart1.json"; // We're storing the URL of the graph we want to display in a variable
-        var figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json";
+        var figure_2_spec = "s2_chart2_productivity.json"
+        var figure_3_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json";
 
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
         vegaEmbed('#Location2', figure_2_spec)
+        vegaEmbed('#Location3', figure_3_spec)
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
